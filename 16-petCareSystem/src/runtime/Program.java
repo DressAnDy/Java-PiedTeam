@@ -1,7 +1,11 @@
 
 package runtime;
 
+import data.Pet;
 import data.petManagement;
+import java.util.Scanner;
+import ui.Menu;
+import utils.Inputter;
 
 /*
 Viết 1 chương trình quản lý thú cưng (DOG | CAT)
@@ -26,11 +30,56 @@ Viết 1 chương trình quản lý thú cưng (DOG | CAT)
 public class Program {
 
     public static void main(String[] args) {
-       //test code
-       //tạo ra anh quản lý danh sách , thay vì danh sách
         petManagement pm = new petManagement();
-        pm.initData(); //nạp thêm data cho t
-        pm.showPetList(); //in danh sách pet ra xem
+        pm.initData();
+        Menu menu = new Menu("Pet Care System Menu");
+        menu.addNewOption("Add new Dog");
+        menu.addNewOption("Add new Cat");
+        menu.addNewOption("Print Pet List");
+        menu.addNewOption("Search Pet By Id");
+        menu.addNewOption("Update Pet By Id");
+        menu.addNewOption("Remove Pet By Id");
+        menu.addNewOption("Sort Pet Order By Weight");
+        menu.addNewOption("Save file and Quit");
+        
+        int choice;
+        while(true){
+            menu.print();
+            choice = menu.getChoice();
+            switch(choice){
+                case 1:{
+                   pm.addNewDog();
+                   break;
+                }
+                case 2:{
+                    pm.addNewCat();
+                    break;
+                }
+                case 3:{
+                    pm.showPetList();
+                    break;
+                }
+                case 4:{
+                    pm.searchPetById();
+                    break;
+                }
+                case 5:{
+                    pm.updatePetById();
+                    break;
+                }
+                case 6:{
+                    pm.removePetById();
+                    break;
+                }
+                case 7:{
+                    pm.sortPetListByWeight();
+                    break;
+                }
+                case 8:{
+                    System.out.println("See you again");
+                    return;
+                }
+            }
+        }
     }
-    
 }

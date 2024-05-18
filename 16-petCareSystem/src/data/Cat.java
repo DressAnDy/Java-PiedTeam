@@ -6,14 +6,19 @@ public class Cat extends Pet{
     //constructor
 
     public Cat(String id ,String owner, String color, double weight, String ribbon) {
-        super(owner, color, weight);
+        super(id , owner, color, weight);
         this.ribbon = ribbon;
     }
 
     public String getRibbon() {
         return ribbon;
     }
+    //setter
 
+    public void setRibbon(String ribbon) {
+        this.ribbon = ribbon;
+    }
+    
     @Override
     public void showInfor() { //chỉ in ra chứ không đưa sử dụng
         String str = String.format("%4s|%-12s|%-12s|%6.2f|%s",
