@@ -1,0 +1,3 @@
+D001|Diep        |red         |  2.20|Vong bach kim
+C001|Tung        |brown       |  2.20|Ribbon tim
+C003|Cuong       |blue        |  2.20|Vong I <3 u
