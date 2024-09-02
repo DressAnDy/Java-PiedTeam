@@ -1,0 +1,18 @@
+.tab-content-item{
+    display: none;
+    width: 300px;
+}
+
+.tab-content-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.navtab-btn.actived{
+    background-color: aqua;
+}
+
+.tab-content-item.actived{
+    display: block;
+}
